@@ -1,0 +1,9 @@
+{
+    "app.response.pre": [
+        {
+            "interface": "pallo\\web\\template\\ApplicationListener",
+            "method": "injectTemplateEngine",
+            "weight": "%template.event.weight|90%"
+        }
+    ]
+}

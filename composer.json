@@ -1,0 +1,25 @@
+{
+    "name": "pallo/web-template",
+    "description": "Template library integration in the web interface of the Pallo framework",
+    "license": "MIT",
+    "version": "0.1.0",
+    "authors": [
+        {
+            "name": "Joris Vandeweerd",
+            "email": "joris@statik.be"
+        }
+    ],
+    "require": {
+        "pallo/app": ">=0.4.0",
+        "pallo/lib-config": ">=0.2.0",
+        "pallo/lib-dependency": ">=0.3.0",
+        "pallo/lib-mvc": ">=0.2.0",
+        "pallo/lib-template": ">=0.1.0",
+        "pallo/web": ">=0.1.0"
+    }, 
+    "autoload": {
+        "psr-0": {
+            "pallo\\web\\": ["src/", "test/src/"]
+        }
+    }
+}
