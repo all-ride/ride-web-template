@@ -27,14 +27,13 @@ class ApplicationListener {
         }
 
         $view = $response->getView();
-        if (!$view instanceof TemplateView || $view->getTemplateEngine()) {
+        if (!$view instanceof TemplateView || $view->getTemplateFacade()) {
             return;
         }
 
-        $templateEngineId = $config->get('template.engine');
-        $templateEngine = $dependencyInjector->get('pallo\\library\\template\\TemplateEngine', $templateEngineId);
+        $templateFacade = $dependencyInjector->get('pallo\\library\\template\\TemplateFacade');
 
-        $view->setTemplateEngine($templateEngine);
+        $view->setTemplateFacade($templateFacade);
     }
 
 }

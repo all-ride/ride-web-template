@@ -5,7 +5,7 @@ namespace pallo\web\mvc\view;
 use pallo\library\mvc\exception\MvcException;
 use pallo\library\mvc\view\View;
 use pallo\library\template\Template;
-use pallo\library\template\TemplateEngine;
+use pallo\library\template\TemplateFacade;
 
 /**
  * View for a template
@@ -19,10 +19,10 @@ class TemplateView implements View {
     protected $template;
 
     /**
-     * Instance of the template engine
-     * @var pallo\library\template\TemplateEngine
+     * Instance of the template facade
+     * @var pallo\library\template\TemplateFacade
      */
-    protected $templateEngine;
+    protected $templateFacade;
 
     /**
      * Constructs a new template view
@@ -43,21 +43,21 @@ class TemplateView implements View {
     }
 
     /**
-     * Sets the template engine for this template
-     * @param pallo\library\template\TemplateEngine $templateEngine Instance of
-     * the template engine
+     * Sets the template facade
+     * @param pallo\library\template\TemplateFacade $templateFacade Instance of
+     * the template facade
      * @return null
      */
-    public function setTemplateEngine(TemplateEngine $templateEngine) {
-        $this->templateEngine = $templateEngine;
+    public function setTemplateFacade(TemplateFacade $templateFacade) {
+        $this->templateFacade = $templateFacade;
     }
 
     /**
-     * Gets the template engine from this template
-     * @return pallo\library\template\TemplateEngine
+     * Gets the template facade
+     * @return pallo\library\template\TemplateFacade
      */
-    public function getTemplateEngine() {
-        return $this->templateEngine;
+    public function getTemplateFacade() {
+        return $this->templateFacade;
     }
 
     /**
@@ -68,11 +68,11 @@ class TemplateView implements View {
      * rendered output otherwise
      */
     public function render($willReturnValue = true) {
-        if (!$this->templateEngine) {
-            throw new MvcException("Could not render template view: no template engine set, invoke setTemplateEngine() first");
+        if (!$this->templateFacade) {
+            throw new MvcException("Could not render template view: template facade not set, invoke setTemplateFacade() first");
         }
 
-        $output = $this->templateEngine->render($this->template);
+        $output = $this->templateFacade->render($this->template);
 
         if ($willReturnValue) {
             return $output;

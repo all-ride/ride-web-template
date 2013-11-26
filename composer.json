@@ -11,10 +11,11 @@
     ],
     "require": {
         "pallo/app": ">=0.4.0",
+        "pallo/app-template": ">=0.1.0",
         "pallo/lib-config": ">=0.2.0",
         "pallo/lib-dependency": ">=0.3.0",
         "pallo/lib-mvc": ">=0.2.0",
-        "pallo/lib-template": ">=0.1.0",
+        "pallo/lib-template": ">=0.2.0",
         "pallo/web": ">=0.1.0"
     }, 
     "autoload": {
