@@ -14,14 +14,11 @@ class TemplateController extends AbstractController {
      * @param string $resource Resource of the template
      * @return null
      */
-    public function renderAction($resource) {
-        $templateEngineId = $this->config->get('template.engine');
-        $templateEngine = $this->dependencyInjector->get('pallo\\library\\template\\TemplateEngine', $templateEngineId);
-
-        $template = $templateEngine->createTemplate($resource);
+    public function renderAction(TemplateFacade $templateFacade, $resource) {
+        $template = $templateFacade->createTemplate($resource);
 
         $view = new TemplateView($template);
-        $view->setTemplateEngine($templateEngine);
+        $view->setTemplateFacade($templateFacade);
 
         $this->response->setView($view);
     }
