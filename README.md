@@ -1,3 +1,3 @@
-# Pallo: Template Web Integration
+# Ride: Template Web Integration
 
-Template library integration in the web interface of the Pallo framework
+Template library integration in the web interface of the Ride framework

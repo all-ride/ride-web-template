@@ -1,8 +1,8 @@
 <?php
 
-namespace pallo\web\mvc\controller;
+namespace ride\web\mvc\controller;
 
-use pallo\web\mvc\view\TemplateView;
+use ride\web\mvc\view\TemplateView;
 
 /**
  * Controller to render a template
