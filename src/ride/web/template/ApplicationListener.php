@@ -1,22 +1,22 @@
 <?php
 
-namespace pallo\web\template;
+namespace ride\web\template;
 
-use pallo\library\config\Config;
-use pallo\library\dependency\DependencyInjector;
-use pallo\library\event\Event;
+use ride\library\config\Config;
+use ride\library\dependency\DependencyInjector;
+use ride\library\event\Event;
 
-use pallo\web\mvc\view\TemplateView;
+use ride\web\mvc\view\TemplateView;
 
 /**
- * Event listeners for the pallo-web-template module
+ * Event listeners for the ride-web-template module
  */
 class ApplicationListener {
 
     /**
      * Event listener to inject the template engine in the template view of the
      * response
-     * @param pallo\library\event\Event $event
+     * @param ride\library\event\Event $event
      * @return null
      */
     public function injectTemplateEngine(Event $event, Config $config, DependencyInjector $dependencyInjector) {
@@ -31,7 +31,7 @@ class ApplicationListener {
             return;
         }
 
-        $templateFacade = $dependencyInjector->get('pallo\\library\\template\\TemplateFacade');
+        $templateFacade = $dependencyInjector->get('ride\\library\\template\\TemplateFacade');
 
         $view->setTemplateFacade($templateFacade);
     }
