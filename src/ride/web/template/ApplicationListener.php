@@ -16,7 +16,7 @@ class ApplicationListener {
     /**
      * Event listener to inject the template engine in the template view of the
      * response
-     * @param ride\library\event\Event $event
+     * @param \ride\library\event\Event $event
      * @return null
      */
     public function injectTemplateEngine(Event $event, Config $config, DependencyInjector $dependencyInjector) {
