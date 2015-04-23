@@ -14,19 +14,19 @@ class TemplateView extends AbstractHtmlView {
 
     /**
      * Instance of the template
-     * @var ride\library\template\Template
+     * @var \ride\library\template\Template
      */
     protected $template;
 
     /**
      * Instance of the template facade
-     * @var ride\library\template\TemplateFacade
+     * @var \ride\library\template\TemplateFacade
      */
     protected $templateFacade;
 
     /**
      * Constructs a new template view
-     * @param ride\library\template\Template $template Instance of the
+     * @param \ride\library\template\Template $template Instance of the
      * template to render
      * @return null
      */
@@ -36,7 +36,7 @@ class TemplateView extends AbstractHtmlView {
 
     /**
      * Gets the template of this view
-     * @return ride\library\template\Template
+     * @return \ride\library\template\Template
      */
     public function getTemplate() {
         return $this->template;
@@ -44,7 +44,7 @@ class TemplateView extends AbstractHtmlView {
 
     /**
      * Sets the template facade
-     * @param ride\library\template\TemplateFacade $templateFacade Instance of
+     * @param \ride\library\template\TemplateFacade $templateFacade Instance of
      * the template facade
      * @return null
      */
@@ -54,7 +54,7 @@ class TemplateView extends AbstractHtmlView {
 
     /**
      * Gets the template facade
-     * @return ride\library\template\TemplateFacade
+     * @return \ride\library\template\TemplateFacade
      */
     public function getTemplateFacade() {
         return $this->templateFacade;
